@@ -1,0 +1,18 @@
+<ion-view title="My Offers">
+	<ion-nav-buttons side="right">
+		<button class="button button-icon button-clear ion-plus-round" ui-sref="app.create-offer"></button>
+	</ion-nav-buttons>
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+    <ion-refresher
+	    pulling-text="Loading..."
+	    on-refresh="ctrl.refresh()">
+  	</ion-refresher>
+        <ion-list>
+            <ion-item class="item-thumbnail-left" collection-repeat="offer in ctrl.offers">
+                <img src="img/ZQRtpEI0TpefBgSugxwc_a7sb2014.png">
+                <h2>{{ offer.title }}</h2>
+                <p>{{ offer.description }}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
